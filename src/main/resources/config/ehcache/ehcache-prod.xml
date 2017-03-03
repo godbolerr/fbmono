@@ -22,5 +22,11 @@
 
     <cache alias="com.work.fb.social.SocialUserConnection" uses-template="simple"/>
 
+    <cache alias="com.work.fb.domain.FbMessage" uses-template="simple"/>
+
+    <cache alias="com.work.fb.domain.Fbpost" uses-template="simple"/>
+
+    <cache alias="com.work.fb.domain.FbUToken" uses-template="simple"/>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </config>

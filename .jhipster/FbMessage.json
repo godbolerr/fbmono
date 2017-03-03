@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "userid",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "messageId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "replyMessage",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "replyStatus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createdOn",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170303051614",
+    "entityTableName": "fb_message",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "angularJSSuffix": "pPost"
+}

@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span>Fb Message</span> {{vm.fbMessage.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Userid</span></dt>
+        <dd>
+            <span>{{vm.fbMessage.userid}}</span>
+        </dd>
+        <dt><span>Message Id</span></dt>
+        <dd>
+            <span>{{vm.fbMessage.messageId}}</span>
+        </dd>
+        <dt><span>Reply Message</span></dt>
+        <dd>
+            <span>{{vm.fbMessage.replyMessage}}</span>
+        </dd>
+        <dt><span>Reply Status</span></dt>
+        <dd>
+            <span>{{vm.fbMessage.replyStatus}}</span>
+        </dd>
+        <dt><span>Created On</span></dt>
+        <dd>
+            <span>{{vm.fbMessage.createdOn}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="fb-message-p-post-detail.edit({id:vm.fbMessage.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

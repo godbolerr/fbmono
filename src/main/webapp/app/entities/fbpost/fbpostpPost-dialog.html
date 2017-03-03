@@ -1,0 +1,92 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myFbpostLabel">Create or edit a Fbpost</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.fbpost.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.fbpost.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_userId">User Id</label>
+            <input type="text" class="form-control" name="userId" id="field_userId"
+                    ng-model="vm.fbpost.userId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_url">Url</label>
+            <input type="text" class="form-control" name="url" id="field_url"
+                    ng-model="vm.fbpost.url"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.fbpost.description"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.fbpost.name"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_caption">Caption</label>
+            <input type="text" class="form-control" name="caption" id="field_caption"
+                    ng-model="vm.fbpost.caption"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_place">Place</label>
+            <input type="text" class="form-control" name="place" id="field_place"
+                    ng-model="vm.fbpost.place"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_createdOn">Created On</label>
+            <input type="text" class="form-control" name="createdOn" id="field_createdOn"
+                    ng-model="vm.fbpost.createdOn"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_createdBy">Created By</label>
+            <input type="text" class="form-control" name="createdBy" id="field_createdBy"
+                    ng-model="vm.fbpost.createdBy"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_objectId">Object Id</label>
+            <input type="text" class="form-control" name="objectId" id="field_objectId"
+                    ng-model="vm.fbpost.objectId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_privacy">Privacy</label>
+            <input type="text" class="form-control" name="privacy" id="field_privacy"
+                    ng-model="vm.fbpost.privacy"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_status">Status</label>
+            <input type="text" class="form-control" name="status" id="field_status"
+                    ng-model="vm.fbpost.status"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

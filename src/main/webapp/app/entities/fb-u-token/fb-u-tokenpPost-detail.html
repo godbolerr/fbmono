@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span>Fb U Token</span> {{vm.fbUToken.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Userid</span></dt>
+        <dd>
+            <span>{{vm.fbUToken.userid}}</span>
+        </dd>
+        <dt><span>U Token</span></dt>
+        <dd>
+            <span>{{vm.fbUToken.uToken}}</span>
+        </dd>
+        <dt><span>Created On</span></dt>
+        <dd>
+            <span>{{vm.fbUToken.createdOn}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="fb-u-token-p-post-detail.edit({id:vm.fbUToken.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

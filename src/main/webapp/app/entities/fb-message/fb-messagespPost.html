@@ -1,0 +1,64 @@
+<div>
+    <h2>Fb Messages</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="fb-message-p-post.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Fb Message
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>Userid</span></th>
+                    <th><span>Message Id</span></th>
+                    <th><span>Reply Message</span></th>
+                    <th><span>Reply Status</span></th>
+                    <th><span>Created On</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="fbMessage in vm.fbMessages track by fbMessage.id">
+                    <td><a ui-sref="fb-message-p-post-detail({id:fbMessage.id})">{{fbMessage.id}}</a></td>
+                    <td>{{fbMessage.userid}}</td>
+                    <td>{{fbMessage.messageId}}</td>
+                    <td>{{fbMessage.replyMessage}}</td>
+                    <td>{{fbMessage.replyStatus}}</td>
+                    <td>{{fbMessage.createdOn}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="fb-message-p-post-detail({id:fbMessage.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="fb-message-p-post.edit({id:fbMessage.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="fb-message-p-post.delete({id:fbMessage.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

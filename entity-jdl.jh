@@ -1,0 +1,38 @@
+
+
+entity Fbpost {
+    userId String,
+    url String,
+    description String,
+    name String,
+    caption String,
+	place String,
+	createdOn String,
+	createdBy String,
+	objectId String,
+	privacy String,
+    status String
+}
+
+entity FbUToken {
+   userid String,
+   uToken String,
+   createdOn String
+}
+
+entity FbMessage {
+   userid String,
+   messageId String,
+   replyMessage String,
+   replyStatus String,
+   createdOn String
+}
+
+
+paginate Fbpost with pagination
+
+dto * with mapstruct
+
+service all with serviceImpl 
+
+angularSuffix * with pPost

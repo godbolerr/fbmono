@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span>Fbpost</span> {{vm.fbpost.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>User Id</span></dt>
+        <dd>
+            <span>{{vm.fbpost.userId}}</span>
+        </dd>
+        <dt><span>Url</span></dt>
+        <dd>
+            <span>{{vm.fbpost.url}}</span>
+        </dd>
+        <dt><span>Description</span></dt>
+        <dd>
+            <span>{{vm.fbpost.description}}</span>
+        </dd>
+        <dt><span>Name</span></dt>
+        <dd>
+            <span>{{vm.fbpost.name}}</span>
+        </dd>
+        <dt><span>Caption</span></dt>
+        <dd>
+            <span>{{vm.fbpost.caption}}</span>
+        </dd>
+        <dt><span>Place</span></dt>
+        <dd>
+            <span>{{vm.fbpost.place}}</span>
+        </dd>
+        <dt><span>Created On</span></dt>
+        <dd>
+            <span>{{vm.fbpost.createdOn}}</span>
+        </dd>
+        <dt><span>Created By</span></dt>
+        <dd>
+            <span>{{vm.fbpost.createdBy}}</span>
+        </dd>
+        <dt><span>Object Id</span></dt>
+        <dd>
+            <span>{{vm.fbpost.objectId}}</span>
+        </dd>
+        <dt><span>Privacy</span></dt>
+        <dd>
+            <span>{{vm.fbpost.privacy}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.fbpost.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="fbpost-p-post-detail.edit({id:vm.fbpost.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>
