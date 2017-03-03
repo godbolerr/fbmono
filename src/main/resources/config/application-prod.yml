@@ -45,6 +45,14 @@ spring:
     cache:
         jcache:
             config: config/ehcache/ehcache-dev.xml
+
+# KalpakTa
+# 1522960467744735
+# 5e4bed5545540447e7701e35ca4a8897
+    social: 
+        facebook:
+            client-id: 1522960467744735
+            client-secret: 5e4bed5545540447e7701e35ca4a8897
     mail:
         host: localhost
         port: 25
@@ -117,7 +125,8 @@ jhipster:
             host: localhost
             port: 5000
             queue-size: 512
-
+            
+            
 # ===================================================================
 # Application specific properties
 # Add your own application properties here, see the ApplicationProperties class
